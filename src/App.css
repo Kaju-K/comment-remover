@@ -2,9 +2,11 @@
   width: 100%;
   min-height: 100vh;
   box-sizing: border-box;
-  padding-top: 3rem;
+  padding-top: 5rem;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 2rem;
   background: linear-gradient(180deg, rgb(204,204,204)  0%, rgb(224,206,206) 100%);
 }
