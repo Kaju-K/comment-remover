@@ -1,24 +1,51 @@
-import logo from './logo.svg';
 import './App.css';
+import {
+  createBrowserRouter,
+  Outlet,
+  RouterProvider
+} from 'react-router-dom'
+
+import { createContext, useState } from 'react';
+
+import Navigation from './components/Navigation';
+import ErrorPage from './pages/ErrorPage';
+import ReadFile from './pages/ReadFile';
+import Output from './pages/Output';
+
+
+const router = createBrowserRouter([
+  {
+    element: (
+      <>
+        <Navigation />
+        <main className='main'>
+          <Outlet />
+        </main>
+      </>
+    ),
+    errorElement: <ErrorPage />,
+    children: [
+      {
+        path: '/read-file',
+        element: <ReadFile />
+      },
+      {
+        path: '/output',
+        element: <Output />
+      }
+    ]
+  }
+])
+
+export const TextContext = createContext(null)
 
 function App() {
+  const [texts, setTexts] = useState([])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <TextContext.Provider value={{texts, setTexts}}>
+      <RouterProvider router={router} />
+    </TextContext.Provider>
   );
 }
 

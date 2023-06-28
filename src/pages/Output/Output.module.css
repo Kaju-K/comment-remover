@@ -1,0 +1,12 @@
+.textDisplay {
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 60%;
+    box-shadow: 3px 3px 3px 3px gray;
+    background: linear-gradient(150deg, white 0%, rgb(223, 219, 219) 60%, rgb(212, 211, 211) 100%);
+}
+
+.outputTitle {
+    text-transform: uppercase;
+}

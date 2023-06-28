@@ -1,0 +1,10 @@
+.main {
+    width: 100%;
+    min-height: 100vh;
+    box-sizing: border-box;
+    padding-top: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, rgb(204,204,204)  0%, rgb(224,206,206) 100%);
+}
