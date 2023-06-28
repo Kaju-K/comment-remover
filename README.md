@@ -5,5 +5,6 @@ In this project the user can upload a '.txt' file on '/read-file' page and on th
 Multi-line comments are resperesnted as:
     /* bla bla bla
     Cha cha cha goooooo */
+<br>
 Single-line comments will be resperesnted as:
 	 // bla bla bla…
